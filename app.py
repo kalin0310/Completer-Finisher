@@ -21,12 +21,12 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 # GPT-3.5 Turbo 模型名稱
 model_name = "ft:gpt-3.5-turbo-1106:personal::8nM2oEXy"
 
-def GPT_response(user_input, tokens=500, temperature=0.8):
+def GPT_response(user_input, tokens=500, temperature=1.5):
     # 使用ChatCompletion進行OpenAI API呼叫，並使用傳入的參數
     chat = ChatCompletion.create(
         model=model_name,
         messages=[
-            {"role": "system", "content": "請發揮你是貝爾賓團隊角色中的完美主義者Completer Finisher，你需要依據該角色的在團隊中的行為特徵行動以及與團隊成員相互協作"},
+            {"role": "system", "content": "你是貝爾賓團隊角色中的完美主義者Completer Finisher，你需要依據該角色的在團隊中的行為特徵行動以及與團隊成員相互協作"},
             {"role": "user", "content": user_input}
         ],
         max_tokens=tokens,
