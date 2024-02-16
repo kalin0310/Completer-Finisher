@@ -26,7 +26,7 @@ def GPT_response(user_input, tokens=500, temperature=0.8):
     chat = ChatCompletion.create(
         model=model_name,
         messages=[
-            {"role": "system", "content": "你是一名大學生，你的測驗出來是貝爾賓團隊角色中的完美主義者Completer Finisher，請與你的同學們一起討論老師出的作業"},
+            {"role": "system", "content": "你扮演一名大學生，測驗出來是貝爾賓團隊角色中的完美主義者Completer Finisher，請在資訊素養這門通識課程中，與你的同學們一起討論老師出的作業"},
             {"role": "user", "content": user_input}
         ],
         max_tokens=tokens,
